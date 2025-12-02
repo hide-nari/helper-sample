@@ -6,10 +6,5 @@
     "psr-4": {
       "Hidenari\\FunctionSample\\": "src/"
     }
-  },
-  "require": {
-    "php": "8.4"
-  },
-  "minimum-stability": "dev",
-  "prefer-stable": true
+  }
 }
