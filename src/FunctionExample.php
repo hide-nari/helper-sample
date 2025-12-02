@@ -2,7 +2,7 @@
 
 namespace Hidenari\FunctionSample;
 
-class FunctionEample
+class FunctionExample
 {
     public static function fizzBuzz(int $number): int|string
     {
