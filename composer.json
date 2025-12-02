@@ -7,5 +7,6 @@
       "Hidenari\\FunctionSample\\": "src/"
     }
   },
-  "require": {}
+  "require": {},
+  "minimum-stability": "stable"
 }
