@@ -1,6 +1,6 @@
 {
   "name": "hidenari/function-sample",
-  "description": "function sample",
+  "description": "util function",
   "type": "library",
   "autoload": {
     "psr-4": {
