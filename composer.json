@@ -6,5 +6,8 @@
     "psr-4": {
       "Hidenari\\FunctionSample\\": "src/"
     }
+  },
+  "require": {
+    "php": ">=8.0.0"
   }
 }
