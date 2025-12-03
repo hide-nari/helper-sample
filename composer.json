@@ -1,6 +1,7 @@
 {
   "name": "hidenari/function-sample",
   "description": "util function",
+  "license": "MIT",
   "type": "library",
   "autoload": {
     "psr-4": {
