@@ -2,7 +2,7 @@
 
 use function Hidenari\HelperSample\fizzBuzz;
 
-test('fizzBuzz function test with parameter',
+test('helper file fizzBuzz function test normal pattern',
     function (string $args, int|string $result) {
         expect(fizzBuzz($args) === $result)->toBeTrue();
     })->with([
@@ -29,12 +29,9 @@ test('fizzBuzz function test with parameter',
     ["3.1", "fizz"],
 ]);
 
-test('fizzBuzz function on error pattern', function () {
-    $data = [
-        // TODO:rebuild pattern
-        "1" => 1,
-    ];
-    foreach ($data as $key => $value) {
-        expect(fizzBuzz($key) === $value)->toBeTrue();
-    }
-});
+test('helper file fizzBuzz function test error pattern',
+    function (string $args, int|string $result) {
+        expect(fizzBuzz($args) === $result)->toBeTrue();
+    })->with([
+    ["1", 1],
+]);
