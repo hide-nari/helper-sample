@@ -20,6 +20,10 @@ test('fizzBuzz with parameter', function () {
         "13" => 13,
         "14" => 14,
         "15" => "fizzbuzz",
+        "1.0" => 1,
+        "1.1" => 1,
+        "2.0" => 2,
+        "2.1" => 2,
     ];
 
     foreach ($data as $key => $value) {
