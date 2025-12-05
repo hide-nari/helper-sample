@@ -7,6 +7,7 @@ test('helper file fizzBuzz function test int pattern',
         expect(fizzBuzz($args) === $result)->toBeTrue();
     })
     ->with([
+        ["0", "fizzbuzz"],
         ["1", 1],
         ["2", 2],
         ["3", "fizz"],
