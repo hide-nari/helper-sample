@@ -30,6 +30,7 @@ test('helper file fizzBuzz function test float pattern',
         expect(fizzBuzz($args) === $result)->toBeTrue();
     })
     ->with([
+        ["0.0", 'fizzbuzz'],
         ["1.0", 1],
         ["1.1", 1],
         ["2.0", 2],
