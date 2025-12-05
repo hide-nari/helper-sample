@@ -2,7 +2,7 @@
 
 namespace Hidenari\HelperSample;
 
-function fizzBuzz(int|float|null|bool $number): int|string
+function fizzBuzz(int|float|bool|null $number): int|string
 {
     if (is_null($number) || is_bool($number)) {
         return 'not a number';

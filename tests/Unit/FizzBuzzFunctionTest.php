@@ -36,7 +36,7 @@ test('helper file fizzBuzz function test float pattern',
 ]);
 
 test('helper file fizzBuzz function test null boolean string pattern',
-    function (null|bool|string $args, int|string $result) {
+    function (null|bool|string $args, string $result) {
         expect(fizzBuzz($args) === $result)->toBeTrue();
     })->with([
     [null, "not a number"],
