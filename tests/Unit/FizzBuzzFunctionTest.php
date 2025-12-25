@@ -12,9 +12,9 @@ class TraitTest
 
 test('helper file fizzBuzz function test int pattern',
     function (string $args, int|string $result) {
-        expect(new Helper()->fizzBuzz($args) === $result)->toBeTrue();
-        expect(new TraitTest()->fizzBuzz($args) === $result)->toBeTrue();
         expect(fizzBuzz($args) === $result)->toBeTrue();
+        expect(new TraitTest()->fizzBuzz($args) === $result)->toBeTrue();
+        expect(new Helper()->fizzBuzz($args) === $result)->toBeTrue();
     })
     ->with([
         ['-15', 'fizzbuzz'],
@@ -42,9 +42,9 @@ test('helper file fizzBuzz function test int pattern',
 
 test('helper file fizzBuzz function test float pattern',
     function (string $args, int|string $result) {
-        expect(new Helper()->fizzBuzz($args) === $result)->toBeTrue();
-        expect(new TraitTest()->fizzBuzz($args) === $result)->toBeTrue();
         expect(fizzBuzz($args) === $result)->toBeTrue();
+        expect(new TraitTest()->fizzBuzz($args) === $result)->toBeTrue();
+        expect(new Helper()->fizzBuzz($args) === $result)->toBeTrue();
     })
     ->with([
         ['-15.1', 'fizzbuzz'],
@@ -63,9 +63,9 @@ test('helper file fizzBuzz function test float pattern',
 
 test('helper file fizzBuzz function test bool error pattern',
     function (bool $args) {
-        new Helper()->fizzBuzz($args);
-        new TraitTest()->fizzBuzz($args);
         fizzBuzz($args);
+        new TraitTest()->fizzBuzz($args);
+        new Helper()->fizzBuzz($args);
     })
     ->with([
         [true],
@@ -75,9 +75,9 @@ test('helper file fizzBuzz function test bool error pattern',
 
 test('helper file fizzBuzz function test etc error pattern',
     function (null|string|array $args) {
-        new Helper()->fizzBuzz($args);
-        new TraitTest()->fizzBuzz($args);
         fizzBuzz($args);
+        new TraitTest()->fizzBuzz($args);
+        new Helper()->fizzBuzz($args);
     })
     ->with([
         [null],
