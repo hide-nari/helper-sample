@@ -5,7 +5,8 @@ use Hidenari\HelperSample\HelperTrait;
 
 use function Hidenari\HelperSample\fizzBuzz;
 
-$trait = new class {
+$trait = new class
+{
     use HelperTrait;
 };
 
@@ -84,7 +85,8 @@ test('helper file fizzBuzz function test etc error pattern',
         [[1, 2, 3]],
         new stdClass,
         (object) ['name' => 'taro'],
-        new class {
+        new class
+        {
             public $name = 'taro';
         },
     ])

@@ -24,36 +24,36 @@ function fizzBuzz(int|float|bool $number): int|string
     return $result ?: (int) $number;
 }
 
-function weekdayCircle(): \Generator
-{
-    $day = 'Sunday';
-    while (true) {
-        yield $day;
-        $day = match ($day) {
-            'Sunday' => 'Monday',
-            'Monday' => 'Tuesday',
-            'Tuesday' => 'Wednesday',
-            'Wednesday' => 'Thursday',
-            'Thursday' => 'Friday',
-            'Friday' => 'Saturday',
-            'Saturday' => 'Sunday'
-        };
-    }
-}
-
-function weekdayCircleJapan(): \Generator
-{
-    $day = '日';
-    while (true) {
-        yield $day;
-        $day = match ($day) {
-            '日' => '月',
-            '月' => '火',
-            '火' => '水',
-            '水' => '木',
-            '木' => '金',
-            '金' => '土',
-            '土' => '日'
-        };
-    }
-}
+// function weekdayCircle(): \Generator
+// {
+//    $day = 'Sunday';
+//    while (true) {
+//        yield $day;
+//        $day = match ($day) {
+//            'Sunday' => 'Monday',
+//            'Monday' => 'Tuesday',
+//            'Tuesday' => 'Wednesday',
+//            'Wednesday' => 'Thursday',
+//            'Thursday' => 'Friday',
+//            'Friday' => 'Saturday',
+//            'Saturday' => 'Sunday'
+//        };
+//    }
+// }
+//
+// function weekdayCircleJapan(): \Generator
+// {
+//    $day = '日';
+//    while (true) {
+//        yield $day;
+//        $day = match ($day) {
+//            '日' => '月',
+//            '月' => '火',
+//            '火' => '水',
+//            '水' => '木',
+//            '木' => '金',
+//            '金' => '土',
+//            '土' => '日'
+//        };
+//    }
+// }
