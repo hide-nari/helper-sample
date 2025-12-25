@@ -2,7 +2,12 @@
 
 namespace Hidenari\HelperSample;
 
-trait Helper
+class Helper
+{
+    use HelperTrait;
+}
+
+trait HelperTrait
 {
     public function fizzBuzz(int|float|bool $number): int|string
     {

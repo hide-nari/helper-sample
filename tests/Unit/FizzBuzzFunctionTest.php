@@ -1,16 +1,18 @@
 <?php
 
 use Hidenari\HelperSample\Helper;
+use Hidenari\HelperSample\HelperTrait;
 
 use function Hidenari\HelperSample\fizzBuzz;
 
 class TraitTest
 {
-    use Helper;
+    use HelperTrait;
 }
 
 test('helper file fizzBuzz function test int pattern',
     function (string $args, int|string $result) {
+        expect(new Helper()->fizzBuzz($args) === $result)->toBeTrue();
         expect(new TraitTest()->fizzBuzz($args) === $result)->toBeTrue();
         expect(fizzBuzz($args) === $result)->toBeTrue();
     })
@@ -40,6 +42,7 @@ test('helper file fizzBuzz function test int pattern',
 
 test('helper file fizzBuzz function test float pattern',
     function (string $args, int|string $result) {
+        expect(new Helper()->fizzBuzz($args) === $result)->toBeTrue();
         expect(new TraitTest()->fizzBuzz($args) === $result)->toBeTrue();
         expect(fizzBuzz($args) === $result)->toBeTrue();
     })
@@ -60,6 +63,7 @@ test('helper file fizzBuzz function test float pattern',
 
 test('helper file fizzBuzz function test bool error pattern',
     function (bool $args) {
+        new Helper()->fizzBuzz($args);
         new TraitTest()->fizzBuzz($args);
         fizzBuzz($args);
     })
@@ -71,6 +75,7 @@ test('helper file fizzBuzz function test bool error pattern',
 
 test('helper file fizzBuzz function test etc error pattern',
     function (null|string|array $args) {
+        new Helper()->fizzBuzz($args);
         new TraitTest()->fizzBuzz($args);
         fizzBuzz($args);
     })
