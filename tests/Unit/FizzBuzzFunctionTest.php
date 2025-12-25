@@ -5,15 +5,14 @@ use Hidenari\HelperSample\HelperTrait;
 
 use function Hidenari\HelperSample\fizzBuzz;
 
-class TraitTest
-{
+$trait = new class {
     use HelperTrait;
-}
+};
 
 test('helper file fizzBuzz function test int pattern',
-    function (string $args, int|string $result) {
+    function (string $args, int|string $result) use ($trait) {
         expect(fizzBuzz($args) === $result)->toBeTrue();
-        expect(new TraitTest()->fizzBuzz($args) === $result)->toBeTrue();
+        expect($trait->fizzBuzz($args) === $result)->toBeTrue();
         expect(new Helper()->fizzBuzz($args) === $result)->toBeTrue();
     })
     ->with([
@@ -41,9 +40,9 @@ test('helper file fizzBuzz function test int pattern',
     ]);
 
 test('helper file fizzBuzz function test float pattern',
-    function (string $args, int|string $result) {
+    function (string $args, int|string $result) use ($trait) {
         expect(fizzBuzz($args) === $result)->toBeTrue();
-        expect(new TraitTest()->fizzBuzz($args) === $result)->toBeTrue();
+        expect($trait->fizzBuzz($args) === $result)->toBeTrue();
         expect(new Helper()->fizzBuzz($args) === $result)->toBeTrue();
     })
     ->with([
@@ -62,9 +61,9 @@ test('helper file fizzBuzz function test float pattern',
     ]);
 
 test('helper file fizzBuzz function test bool error pattern',
-    function (bool $args) {
+    function (bool $args) use ($trait) {
         fizzBuzz($args);
-        new TraitTest()->fizzBuzz($args);
+        $trait->fizzBuzz($args);
         new Helper()->fizzBuzz($args);
     })
     ->with([
@@ -74,9 +73,9 @@ test('helper file fizzBuzz function test bool error pattern',
     ->throws(TypeError::class, 'bool type error');
 
 test('helper file fizzBuzz function test etc error pattern',
-    function (null|string|array $args) {
+    function (null|string|array $args) use ($trait) {
         fizzBuzz($args);
-        new TraitTest()->fizzBuzz($args);
+        $trait->fizzBuzz($args);
         new Helper()->fizzBuzz($args);
     })
     ->with([
@@ -85,8 +84,7 @@ test('helper file fizzBuzz function test etc error pattern',
         [[1, 2, 3]],
         new stdClass,
         (object) ['name' => 'taro'],
-        new class
-        {
+        new class {
             public $name = 'taro';
         },
     ])
