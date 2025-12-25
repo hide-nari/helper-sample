@@ -1,13 +1,15 @@
-
 fizzbuzz function Sample on php version 8.3 or later.
 
-## about this package
+# about this package
 
-Funtion fizzbuzz
+## function fizzbuzz(number)
 
-- Use can trait and class method
-- new XXX()->fizzbuzz(X);
+### When given a number, it returns string or number depending on the condition.
 
+#### Conditions
+
+- If divisible by 3, it returns “fizz”.
+- If divisible by 5, it returns “buzz”.
 
 ## Update Rules
 
