@@ -2,7 +2,7 @@
 
 use Hidenari\HelperSample\HelperCustom;
 
-test('helper file fizzBuzz custom function test int pattern',
+test('helper custom file fizzBuzz custom function test int pattern',
     function (string $args, int|string $result) {
         expect(new HelperCustom()->fizzBuzz($args) === $result)->toBeTrue();
     })->with([
@@ -30,7 +30,7 @@ test('helper file fizzBuzz custom function test int pattern',
         ['30', 'FIZZBUZZ'],
     ]);
 
-test('helper file fizzBuzz function test float pattern',
+test('helper custom file fizzBuzz function test float pattern',
     function (string $args, int|string $result) {
         expect(new HelperCustom()->fizzBuzz($args) === $result)->toBeTrue();
     })
@@ -50,7 +50,7 @@ test('helper file fizzBuzz function test float pattern',
         ['30.0', 'FIZZBUZZ'],
     ]);
 
-test('helper file fizzBuzz function test bool error pattern',
+test('helper custom file fizzBuzz function test bool error pattern',
     function (bool $args) {
         new HelperCustom()->fizzBuzz($args);
     })
@@ -60,7 +60,7 @@ test('helper file fizzBuzz function test bool error pattern',
     ])
     ->throws(TypeError::class, 'bool type error');
 
-test('helper file fizzBuzz function test etc error pattern',
+test('helper custom file fizzBuzz function test etc error pattern',
     function (null|string|array $args) {
         new HelperCustom()->fizzBuzz($args);
     })
