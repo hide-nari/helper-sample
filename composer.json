@@ -5,7 +5,8 @@
   "type": "library",
   "autoload": {
     "files": [
-      "src/helper.php"
+      "src/Helper.php",
+      "src/HelperCustom.php"
     ]
   },
   "autoload-dev": {
@@ -19,5 +20,10 @@
   "require-dev": {
     "pestphp/pest": "^4.1",
     "laravel/pint": "^1.26"
+  },
+  "config": {
+    "allow-plugins": {
+      "pestphp/pest-plugin": false
+    }
   }
 }
