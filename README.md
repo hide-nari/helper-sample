@@ -11,6 +11,9 @@ fizzbuzz function Sample on php version 8.3 or later.
 - If divisible by 3, it returns “fizz”.
 - If divisible by 5, it returns “buzz”.
 
+
+- Extends - If divisible by 30, it returns uppercase words.
+
 ## Update Rules
 
 When updating, execute the following command.
