@@ -12,6 +12,6 @@ class HelperCustom extends Helper
         $result = parent::fizzBuzz($number);
 
         return (int) $number % 30 === 0 ?
-            strtoupper((string) $result) : $result;
+            (string) $result |> strtoupper(...) : $result;
     }
 }
