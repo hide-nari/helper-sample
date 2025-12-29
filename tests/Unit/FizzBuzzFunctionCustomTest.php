@@ -67,6 +67,8 @@ test('helper custom file fizzBuzz function test etc error pattern',
     ->with([
         [null],
         ['str'],
+        ['str123'],
+        ['123str'],
         [[1, 2, 3]],
         new stdClass,
         (object) ['name' => 'taro'],
