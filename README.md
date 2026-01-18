@@ -1,4 +1,4 @@
-fizzbuzz function Sample on php version 8.3 or later.
+fizzbuzz function Sample on php version 8.5 or later.
 
 # about this package
 
