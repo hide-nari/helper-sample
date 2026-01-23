@@ -7,6 +7,7 @@ use Override;
 class HelperCustom extends Helper
 {
     #[Override]
+    #[\NoDiscard]
     public function fizzBuzz(float|bool|int $number): int|string
     {
         $result = parent::fizzBuzz($number);

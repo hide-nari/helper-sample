@@ -52,7 +52,7 @@ test('helper custom file fizzBuzz function test float pattern',
 
 test('helper custom file fizzBuzz function test bool error pattern',
     function (bool $args) {
-        new HelperCustom()->fizzBuzz($args);
+        (void) new HelperCustom()->fizzBuzz($args);
     })
     ->with([
         [true],
@@ -62,7 +62,7 @@ test('helper custom file fizzBuzz function test bool error pattern',
 
 test('helper custom file fizzBuzz function test etc error pattern',
     function (null|string|array $args) {
-        new HelperCustom()->fizzBuzz($args);
+        (void) new HelperCustom()->fizzBuzz($args);
     })
     ->with([
         [null],

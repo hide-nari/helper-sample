@@ -15,6 +15,7 @@ trait HelperTrait
     }
 }
 
+#[\NoDiscard]
 function fizzBuzz(int|float|bool $number): int|string
 {
     is_bool($number) && throw new \TypeError('bool type error');

@@ -63,7 +63,7 @@ test('helper file fizzBuzz function test float pattern',
 
 test('helper file fizzBuzz function test bool error pattern',
     function (bool $args) use ($trait) {
-        fizzBuzz($args);
+        (void) fizzBuzz($args);
         $trait->fizzBuzz($args);
         new Helper()->fizzBuzz($args);
     })
@@ -75,7 +75,7 @@ test('helper file fizzBuzz function test bool error pattern',
 
 test('helper file fizzBuzz function test etc error pattern',
     function (null|string|array $args) use ($trait) {
-        fizzBuzz($args);
+        (void) fizzBuzz($args);
         $trait->fizzBuzz($args);
         new Helper()->fizzBuzz($args);
     })
