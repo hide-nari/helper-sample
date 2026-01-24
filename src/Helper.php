@@ -2,6 +2,8 @@
 
 namespace Hidenari\HelperSample;
 
+use TypeError;
+
 class Helper
 {
     use HelperTrait;
@@ -18,9 +20,8 @@ trait HelperTrait
 #[\NoDiscard]
 function fizzBuzz(int|float|bool $number): int|string
 {
-    is_bool($number) && throw new \TypeError('bool type error');
-    $result = (int) $number % 3 === 0 ? 'fizz' : '';
-    $result .= (int) $number % 5 === 0 ? 'buzz' : '';
+    is_bool($number) && throw new TypeError('bool type error');
 
-    return $result ?: (int) $number;
+    return ((int) $number % 3 === 0 ? 'fizz' : '').
+    ((int) $number % 5 === 0 ? 'buzz' : '') ?: (int) $number;
 }

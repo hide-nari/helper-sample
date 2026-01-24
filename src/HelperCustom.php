@@ -2,12 +2,13 @@
 
 namespace Hidenari\HelperSample;
 
+use NoDiscard;
 use Override;
 
 class HelperCustom extends Helper
 {
     #[Override]
-    #[\NoDiscard]
+    #[NoDiscard]
     public function fizzBuzz(float|bool|int $number): int|string
     {
         $result = parent::fizzBuzz($number);
